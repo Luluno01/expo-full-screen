@@ -1,13 +1,25 @@
-import { StyleSheet, Text, View, Pressable, Button } from 'react-native'
+import { StyleSheet, View, Button } from 'react-native'
+import { StatusBar } from 'expo-status-bar'
 
-import ExpoFullScreen from '@untitled/expo-full-screen'
+import * as ExpoFullScreen from '@untitled/expo-full-screen'
 
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Button onPress={ExpoFullScreen.enterFullScreen} title="Enter Full Screen" />
-      <Button onPress={ExpoFullScreen.exitFullScreen} title="Exit Full Screen" />
+      <StatusBar style="dark" />
+      <View style={styles.item}>
+        <Button onPress={ExpoFullScreen.enterFullScreen} title="Enter Full Screen" />
+      </View>
+      <View style={styles.item}>
+        <Button onPress={ExpoFullScreen.exitFullScreen} title="Exit Full Screen" />
+      </View>
+      <View style={styles.item}>
+        <Button onPress={ExpoFullScreen.enterFullScreenSync} title="Enter Full Screen (Sync)" />
+      </View>
+      <View style={styles.item}>
+        <Button onPress={ExpoFullScreen.exitFullScreenSync} title="Exit Full Screen (Sync)" />
+      </View>
     </View>
   )
 }
@@ -19,4 +31,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  item: {
+    marginBottom: 8
+  }
 })

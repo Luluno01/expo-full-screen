@@ -2,13 +2,17 @@ import { Platform, requireNativeModule } from 'expo-modules-core'
 
 
 export interface ExpoFullScreenModule {
-  enterFullScreen(): void
-  exitFullScreen(): void
+  enterFullScreen(): Promise<void>
+  exitFullScreen(): Promise<void>
+  enterFullScreenSync(): void
+  exitFullScreenSync(): void
 }
 
 const dummyImpl: ExpoFullScreenModule = {
-  enterFullScreen() {},
-  exitFullScreen() {}
+  async enterFullScreen() {},
+  async exitFullScreen() {},
+  enterFullScreenSync() {},
+  exitFullScreenSync() {}
 }
 
 // It loads the native module object from the JSI or falls back to

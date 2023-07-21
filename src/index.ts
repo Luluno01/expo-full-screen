@@ -3,4 +3,18 @@
 import ExpoFullScreenModule from './ExpoFullScreenModule'
 
 
-export default ExpoFullScreenModule
+export async function enterFullScreen() {
+  return ExpoFullScreenModule.enterFullScreen()
+}
+
+export async function exitFullScreen() {
+  return ExpoFullScreenModule.exitFullScreen()
+}
+
+export function enterFullScreenSync() {
+  ExpoFullScreenModule.enterFullScreenSync()
+}
+
+export function exitFullScreenSync() {
+  ExpoFullScreenModule.exitFullScreenSync()
+}
