@@ -1,13 +1,15 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Pressable, Button } from 'react-native'
 
-import * as ExpoFullScreen from '@untitled/expo-full-screen';
+import ExpoFullScreen from '@untitled/expo-full-screen'
+
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>{ExpoFullScreen.hello()}</Text>
+      <Button onPress={ExpoFullScreen.enterFullScreen} title="Enter Full Screen" />
+      <Button onPress={ExpoFullScreen.exitFullScreen} title="Exit Full Screen" />
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
@@ -17,4 +19,4 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-});
+})
