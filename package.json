@@ -9,7 +9,9 @@
     "clean": "expo-module clean",
     "lint": "expo-module lint",
     "test": "expo-module test",
-    "prepare": "expo-module prepare",
+    "prepare": "run-script-os",
+    "prepare:win32": "tsc",
+    "prepare:default": "expo-module prepare",
     "prepublishOnly": "expo-module prepublishOnly",
     "expo-module": "expo-module",
     "open:ios": "open -a \"Xcode\" example/ios",
@@ -28,11 +30,11 @@
   "author": "Untitled <gnu.imm@outlook.com> (https://github.com/Luluno01)",
   "license": "MIT",
   "homepage": "https://github.com/Luluno01/expo-full-screen#readme",
-  "dependencies": {},
   "devDependencies": {
     "@types/react": "^18.0.25",
     "expo-module-scripts": "^3.0.11",
-    "expo-modules-core": "^1.5.7"
+    "expo-modules-core": "^1.5.7",
+    "run-script-os": "^1.1.6"
   },
   "peerDependencies": {
     "expo": "*",
