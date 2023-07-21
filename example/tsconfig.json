@@ -1,0 +1,10 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "paths": {
+      "@untitled/expo-full-screen": ["../src/index"],
+      "@untitled/expo-full-screen/*": ["../src/*"]
+    }
+  }
+}

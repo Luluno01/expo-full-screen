@@ -1,0 +1,9 @@
+{
+  "platforms": ["ios", "android", "web"],
+  "ios": {
+    "modules": ["ExpoFullScreenModule"]
+  },
+  "android": {
+    "modules": ["cyou.untitled.expo.modules.fullscreen.ExpoFullScreenModule"]
+  }
+}
