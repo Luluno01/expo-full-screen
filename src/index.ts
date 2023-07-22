@@ -37,11 +37,11 @@ export function getSystemBarsAppearance() {
   return ExpoFullScreenModule.getSystemBarsAppearance()
 }
 
-export async function setSystemBarsAppearance(appearance: number, mask: number = appearance) {
+export async function setSystemBarsAppearance(appearance: number, mask: number = 0xffffffff) {
   return ExpoFullScreenModule.setSystemBarsAppearance(appearance, mask)
 }
 
-export function setSystemBarsAppearanceSync(appearance: number, mask: number = appearance) {
+export function setSystemBarsAppearanceSync(appearance: number, mask: number = 0xffffffff) {
   ExpoFullScreenModule.setSystemBarsAppearanceSync(appearance, mask)
 }
 
