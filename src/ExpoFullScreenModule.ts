@@ -10,7 +10,7 @@ export interface ExpoFullScreenModule {
   getSystemUiVisibility(): number
   setSystemUiVisibility(visibility: number): Promise<void>
   setSystemUiVisibilitySync(visibility: number): void
-  getSystemBarsAppearance(): number | null
+  getSystemBarsAppearance(): number | undefined
   setSystemBarsAppearance(appearance: number, mask: number): Promise<void>
   setSystemBarsAppearanceSync(appearance: number, mask: number): void
 }
@@ -24,7 +24,7 @@ const dummyImpl: ExpoFullScreenModule = {
   getSystemUiVisibility() { return 0 },
   async setSystemUiVisibility() { },
   setSystemUiVisibilitySync() { },
-  getSystemBarsAppearance() { return null },
+  getSystemBarsAppearance() { return undefined },
   async setSystemBarsAppearance() { },
   setSystemBarsAppearanceSync() { }
 }
